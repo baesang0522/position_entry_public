@@ -12,7 +12,7 @@
 - **Signal gating**: 확신도가 충분히 높을 때만 진입하는 보수적 운영
 - **Risk controls**: 단일 포지션, 재진입 제한(쿨다운), 시간 기반 종료 등 안전장치
 - **Backtest realism**: 상위 타임프레임(신호)과 하위 타임프레임(청산 판정)을 분리하여 과대평가를 줄이는 방향
-
+- **Live Time-Cut Exit**: 일정 시간 이상 보유 시 강제 청산
 ---
 
 ## Latest backtest snapshot (public)
