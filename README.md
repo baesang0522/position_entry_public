@@ -3,8 +3,6 @@
 자동매매/시그널링 시스템을 **설계 → 검증 → 라이브 운영**까지 이어가며 얻은 엔지니어링/리서치 인사이트를 정리한(public-safe) 레포입니다.  
 실제 자본으로 운영 중이지만, **실거래 키·원천 데이터·전략의 세부 규칙(지표/임계값/파라미터/시간대 정책)** 은 보안 및 엣지 보호를 위해 비공개로 유지합니다.
 
-> ⚠️ Trading involves substantial risk of financial loss. This repository is for engineering/research documentation only and is not financial advice. :contentReference[oaicite:0]{index=0}
-
 ---
 
 ## What I built
@@ -20,9 +18,6 @@
 - Win Rate: **59.26%**
 - Trades: **27**
 - Final Capital: **$12,694.63**
-
-> Note: The latest numbers reflect a **backtest timing-alignment fix** to reduce lookahead risk (signal from T-1, entry at T open).  
-> Detailed strategy parameters remain intentionally redacted.
 
 ---
 
