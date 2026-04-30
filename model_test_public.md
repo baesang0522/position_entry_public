@@ -16,13 +16,13 @@
 
 ---
 
-## 3) Backtest snapshot (public)
-최신 공개 기준 검증 스냅샷은 아래와 같습니다.
+## Latest backtest snapshot (public)
+- Total Return: **21.53%**
+- Win Rate: **60.53%**
+- Trades: **38**
+- Final Capital: **$12,152.69**
+- Max Drawdown: **-27.07%**
 
-- Total Return: **26.95%**
-- Win Rate: **59.26%**
-- Trades: **27**
-- Final Capital: **$12,694.63**
 
 ### Important note (correctness)
 최근 공개 수치는 **백테스트 정합성 개선 이후** 기준입니다.

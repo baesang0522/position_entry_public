@@ -17,10 +17,11 @@
 ---
 
 ## Latest backtest snapshot (public)
-- Total Return: **26.95%**
-- Win Rate: **59.26%**
-- Trades: **27**
-- Final Capital: **$12,694.63**
+- Total Return: **21.53%**
+- Win Rate: **60.53%**
+- Trades: **38**
+- Final Capital: **$12,152.69**
+- Max Drawdown: **-27.07%**
 
 ---
 
@@ -46,6 +47,14 @@ EC2 내부 로그 파일(`trader.log`)을 AWS CloudWatch Logs로 수집하도록
 GitHub에 push하면 AWS 쪽 배포 흐름이 자동으로 이어지고,  
 서버에서 최신 코드 기준으로 서비스가 재시작되도록 구성했습니다.  
 이를 통해 수동 배포보다 **반영 속도와 재현성**을 높였습니다.
+
+### 6) Data consistency & deployment safety
+최근에는 데이터와 배포 흐름의 일관성을 강화했습니다.
+
+- **1m source of truth**: 하위 타임프레임(1m) 데이터를 기준으로 저장하고, 상위 타임프레임(1h)은 여기서 파생 생성합니다.
+- **Backtest / training consistency**: 신호 생성용 1h 데이터와 청산 판정용 1m 데이터를 한 계보(source of truth)에서 관리해 정합성을 높였습니다.
+- **Persistent runtime state**: 운영 DB는 코드 배포와 분리된 영속 경로를 사용하며, 재배포 시 과거 백업본으로 자동 복원하지 않습니다.
+- **Predictable deploys**: 배포는 특정 커밋 SHA 기준으로 수행하고, 서버 작업 디렉터리가 dirty 상태이면 배포를 실패시켜 예측 가능성을 높였습니다.
 
 ---
 
